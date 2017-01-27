@@ -8,7 +8,7 @@
     <option value="Instructor">Instructor Profiles</option>
   </select>
 </div>
-
+<br>
 <div *ngFor="let profile of profiles | async | role:filterByRole">
   <div class="well">
     <h3 (click)="goToDetailPage(profile)">{{profile.name}}</h3>
