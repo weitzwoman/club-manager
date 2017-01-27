@@ -20,7 +20,8 @@
     <br>
     <input #newRole>
   </div>
-  <button class="btn" (click)="submitForm(newName.value, newEmail.value, newPhone.value, newRole.value); newName.value=''; newEmail.value=''; newPhone.value=''; newRole.value='';">Add to Roster</button>
+  <br>
+  <button class="btn-lg btn-info" (click)="submitForm(newName.value, newEmail.value, newPhone.value, newRole.value); newName.value=''; newEmail.value=''; newPhone.value=''; newRole.value='';">Add to Roster</button>
 </div>
 
 <app-roster></app-roster>

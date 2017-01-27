@@ -27,4 +27,9 @@ export class ProfileService {
     profileEntryInFirebase.update({name: localUpdatedProfile.name, email: localUpdatedProfile.email, phone: localUpdatedProfile.phone, role: localUpdatedProfile.role});
   }
 
+  deleteProfile(localProfileToDelete){
+    var profileEntryInFirebase = this.getProfileById(localProfileToDelete.$key);
+    profileEntryInFirebase.remove();
+  }
+
 }

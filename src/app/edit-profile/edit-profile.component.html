@@ -1,4 +1,4 @@
-<h3>Edit Profile</h3>
+<h4>Edit Profile</h4>
 
 <label>New Name:</label>
 <input [(ngModel)]="selectedProfile.name">
@@ -15,4 +15,4 @@
 <label>New Role:</label>
 <input [(ngModel)]="selectedProfile.role">
 <br>
-<button class="btn" (click)="beginUpdatingProfile(selectedProfile)">Update</button>
+<button class="btn btn-warning" (click)="beginUpdatingProfile(selectedProfile)">Update</button>  <button class="btn btn-danger" (click)="beginDeletingProfile(selectedProfile)">Delete</button>
