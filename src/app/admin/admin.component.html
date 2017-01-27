@@ -1,27 +1,31 @@
-<h3>Add New Profile to Class Roster</h3>
-<div>
-  <div>
-    <label>Name:</label>
-    <br>
-    <input #newName>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Add New Profile to Class Roster</h3>
+    <div class="well">
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName class="form-control">
+      </div>
+      <div>
+        <label>Email:</label>
+        <br>
+        <input #newEmail class="form-control">
+      </div>
+      <div>
+        <label>Phone Number:</label>
+        <br>
+        <input #newPhone class="form-control">
+      </div>
+      <div>
+        <label>Role:</label>
+        <br>
+        <input #newRole class="form-control">
+      </div>
+      <br>
+      <button class="btn-lg btn-info" (click)="submitForm(newName.value, newEmail.value, newPhone.value, newRole.value); newName.value=''; newEmail.value=''; newPhone.value=''; newRole.value='';">Add to Roster</button>
+    </div>
   </div>
-  <div>
-    <label>Email:</label>
-    <br>
-    <input #newEmail>
-  </div>
-  <div>
-    <label>Phone Number:</label>
-    <br>
-    <input #newPhone>
-  </div>
-  <div>
-    <label>Role:</label>
-    <br>
-    <input #newRole>
-  </div>
-  <br>
-  <button class="btn-lg btn-info" (click)="submitForm(newName.value, newEmail.value, newPhone.value, newRole.value); newName.value=''; newEmail.value=''; newPhone.value=''; newRole.value='';">Add to Roster</button>
 </div>
 
 <app-roster></app-roster>

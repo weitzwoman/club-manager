@@ -1,18 +1,18 @@
 <h4>Edit Profile</h4>
 
 <label>New Name:</label>
-<input [(ngModel)]="selectedProfile.name">
+<input [(ngModel)]="selectedProfile.name" class="form-control">
 <br>
 
 <label>New Email:</label>
-<input [(ngModel)]="selectedProfile.email">
+<input [(ngModel)]="selectedProfile.email" class="form-control">
 <br>
 
 <label>New Phone:</label>
-<input [(ngModel)]="selectedProfile.phone">
+<input [(ngModel)]="selectedProfile.phone" class="form-control">
 <br>
 
 <label>New Role:</label>
-<input [(ngModel)]="selectedProfile.role">
+<input [(ngModel)]="selectedProfile.role" class="form-control">
 <br>
 <button class="btn btn-warning" (click)="beginUpdatingProfile(selectedProfile)">Update</button>  <button class="btn btn-danger" (click)="beginDeletingProfile(selectedProfile)">Delete</button>

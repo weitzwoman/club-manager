@@ -39,7 +39,6 @@ export var masterFirebaseConfig = {
 * _In the Command Line, run:_
 ```
 ng serve
-
 ```
 * _Then, in any modern browser, open:_
 ```
@@ -71,4 +70,4 @@ Club Manager is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with the Club Manager. If not, see http://www.gnu.org/licenses/.
 
-Copyright (c) 2017 **_Tracie Weitzman**
+Copyright (c) 2017 **Tracie Weitzman**
