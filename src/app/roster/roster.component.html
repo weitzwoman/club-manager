@@ -1,6 +1,15 @@
 <h2>Class Roster</h2>
 
-<div *ngFor="let profile of profiles | async">
+<div>
+  <select class="select" (change)="onRoleChange(roleSelection.value)">
+    <option value="allProfile" selected="selected">Show All Profiles</option>
+    <option value="Student">Student Profiles</option>
+    <option value="Committee">Committee Member Profiles</option>
+    <option value="Instructor">Instructor Profiles</option>
+  </select>
+</div>
+
+<div *ngFor="let profile of profiles | async | role:filterByRole">
   <div class="well">
     <h3 (click)="goToDetailPage(profile)">{{profile.name}}</h3>
     <div *ngIf="currentRoute === '/admin'">

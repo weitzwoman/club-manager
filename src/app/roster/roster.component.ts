@@ -10,9 +10,11 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   styleUrls: ['./roster.component.css'],
   providers: [ProfileService]
 })
+
 export class RosterComponent implements OnInit {
   profiles: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByRole: any = "All";
 
   constructor(private router: Router, private profileService: ProfileService) { }
 
@@ -24,4 +26,7 @@ export class RosterComponent implements OnInit {
     this.router.navigate(['profiles', clickedProfile.$key]);
   };
 
+  onRoleChange(role) {
+    this.filterByRole = role;
+  }
 }
