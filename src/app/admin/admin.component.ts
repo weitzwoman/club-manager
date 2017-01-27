@@ -21,4 +21,5 @@ export class AdminComponent implements OnInit {
     this.profileService.addProfile(newProfile);
   }
 
+
 }
