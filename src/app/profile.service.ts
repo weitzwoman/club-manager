@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Profile } from './profile.model';
-import { PROFILES } from './mock-profiles';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class ProfileService {
+  profiles: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private angularFire: AngularFire) {
+    this.profiles = angularFire.database.list('/profiles');
+  }
 
   getProfiles() {
-    return PROFILES;
+    return this.profiles;
+  }
+
+  addProfile(newProfile: Profile) {
+    this.profiles.push(newProfile);
+  }
+
+  getProfileById(profileId: string) {
+    return this.angularFire.database.object('/profiles/' + profileId);
   }
 
 }

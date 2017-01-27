@@ -1,0 +1,32 @@
+{ "profiles": [{
+  "name": "Tracie Weitzman",
+  "email": "tlweitzman@gmail.com",
+  "phone": "555-555-5555",
+  "role": "Committee Member"
+  }, {
+  "name": "Robin Wilcox",
+  "email": "robin@mazamas.org",
+  "phone": "503-555-5555",
+  "role": "Committee Member"
+  }, {
+  "name": "Gary Ballou",
+  "email": "gary@mazamas.org",
+  "phone": "555-555-5551",
+  "role": "Instructor"
+  }, {
+  "name": "Milton Diaz",
+  "email": "milton@gmail.com",
+  "phone": "555-555-5552",
+  "role": "Student"
+  }, {
+  "name": "Kaitlin Rupert",
+  "email": "kaitlin@gmail.com",
+  "phone": "555-555-5553",
+  "role": "Student"
+  }, {
+  "name": "Allison Leggs",
+  "email": "leggs@gmail.com",
+  "phone": "555-555-5554",
+  "role": "Student"
+  }]
+}

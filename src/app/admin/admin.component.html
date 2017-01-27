@@ -1,0 +1,24 @@
+<h3>Add New Profile to Class Roster</h3>
+<div>
+  <div>
+    <label>Name:</label>
+    <br>
+    <input #newName>
+  </div>
+  <div>
+    <label>Email:</label>
+    <br>
+    <input #newEmail>
+  </div>
+  <div>
+    <label>Phone Number:</label>
+    <br>
+    <input #newPhone>
+  </div>
+  <div>
+    <label>Role:</label>
+    <br>
+    <input #newRole>
+  </div>
+  <button class="btn" (click)="submitForm(newName.value, newEmail.value, newPhone.value, newRole.value); newName.value=''; newEmail.value=''; newPhone.value=''; newRole.value='';">Add to Roster</button>
+</div>

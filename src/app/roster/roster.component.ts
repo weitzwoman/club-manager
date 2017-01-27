@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Profile } from '../profile.model';
 import { Router } from '@angular/router';
 import { ProfileService } from '../profile.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-roster',
@@ -10,7 +11,7 @@ import { ProfileService } from '../profile.service';
   providers: [ProfileService]
 })
 export class RosterComponent implements OnInit {
-  profiles: Profile[];
+  profiles: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private profileService: ProfileService) { }
 
@@ -18,8 +19,8 @@ export class RosterComponent implements OnInit {
     this.profiles = this.profileService.getProfiles();
   }
 
-  goToDetailPage(clickedProfile: Profile) {
-    this.router.navigate(['profiles', clickedProfile.id]);
+  goToDetailPage(clickedProfile) {
+    this.router.navigate(['profiles', clickedProfile.$key]);
   };
 
 }
