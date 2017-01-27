@@ -1,7 +1,7 @@
 <h2>Class Roster</h2>
 
 <div>
-  <select class="select" (change)="onRoleChange(roleSelection.value)">
+  <select class="select" (change)="onRoleChange($event.target.value)">
     <option value="allProfile" selected="selected">Show All Profiles</option>
     <option value="Student">Student Profiles</option>
     <option value="Committee">Committee Member Profiles</option>
