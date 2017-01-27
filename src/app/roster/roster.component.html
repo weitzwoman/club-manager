@@ -1,13 +1,13 @@
 <h2>Class Roster</h2>
 
-<div *ngFor="let profile of profiles | async" (click)="goToDetailPage(profile)">
-  <h3>{{profile.name}}</h3>
+<div *ngFor="let profile of profiles | async">
+  <h3 (click)="goToDetailPage(profile)">{{profile.name}}</h3>
   <div *ngIf="currentRoute === '/admin'">
     <ul>
       <li>{{profile.email}}</li>
       <li>{{profile.phone}}</li>
       <li>{{profile.role}}</li>
     </ul>
-    <app-edit-profile></app-edit-profile>
+    <app-edit-profile [selectedProfile]="profile"></app-edit-profile>
   </div>
 </div>

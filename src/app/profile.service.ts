@@ -22,4 +22,9 @@ export class ProfileService {
     return this.angularFire.database.object('/profiles/' + profileId);
   }
 
+  updateProfile(localUpdatedProfile){
+    var profileEntryInFirebase = this.getProfileById(localUpdatedProfile.$key);
+    profileEntryInFirebase.update({name: localUpdatedProfile.name, email: localUpdatedProfile.email, phone: localUpdatedProfile.phone, role: localUpdatedProfile.role});
+  }
+
 }
