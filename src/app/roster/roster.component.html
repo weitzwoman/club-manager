@@ -1,5 +1,5 @@
 <h2>Class Roster</h2>
 
-<div *ngFor="let profile of profiles">
+<div *ngFor="let profile of profiles" (click)="goToDetailPage(profile)">
   <h3>{{profile.name}}</h3>
 </div>
